@@ -1,86 +1,70 @@
-<!DOCTYPE html> 
-<!-- // Diz ao navegador que estamos usando HTML moderno -->
-
+<!DOCTYPE html>
 <html lang="pt-br">
-<!-- // Define o idioma da página, importante pra acessibilidade -->
 
 <head>
   <meta charset="UTF-8">
-  <!-- // Permite acentos e caracteres especiais -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- // Faz o site ficar responsivo no celular -->
 
   <title>Cinematografia - Time Maneiro</title>
-  <!-- // Título da aba do navegador -->
 
   <link rel="stylesheet" href="styles.css">
-  <!-- // Conecta o CSS à página -->
-
-  <section id="sobre-site">
-  <h2>Bem-vindo ao mundo do Time 08!</h2>
-  <p>Oie! Se você chegou até aqui, provavelmente faz parte do <strong>Time 8</strong> ou conhece o nosso trabalho. Este secret site existe por um motivo simples: agradecer — do jeito certo — esse time absurdo do qual eu tenho orgulho de fazer parte.</p>
-
-<p>Pode soar brega, mas a verdade é direta: eu amo demais esses caras. Sem exagero nenhum, é o melhor time que já fiz parte na vida.</p>
-
-<p>Agradeço a <strong>Samuel</strong> pelas figurinhas, memes, nigga, conversas e risadas, tu é massa dms, cara!<br>
-Agradeço a <strong>Artur</strong> pelos memes, pela mãe, pelas conversas e pela criatividade, tu é incrível, bixo!<br>
-Agradeço a <strong>Cabum (Gabriel)</strong> pelas conversas, memes, eventos, brincadeiras e todo acolhimento, tu é surreal, manin!<br>
-Agradeço a <strong>Matheus</strong> pelas risadas, conversas, brincadeiras, momentos, acolhimento e fotos, tu é fera dms, irmão!</p>
-
-<p>Vocês são realmente especiais e estarão no meu coração pra sempre. Sem mentira nenhuma: eu nunca esqueço ninguém, principalmente quando é alguém que eu crio afeto.</p>
-
-<p>O <strong>Time 8</strong> não é só time. É um conjunto de histórias e aventuras patacumbásticas 🚀</p>
-
-</section>
-
-<section id="time"> <!-- // seção que mostra a foto da equipe -->
-  <h2>Nosso Time</h2> <!-- // título da seção -->
-  <img src="FT8.jpeg" alt="Foto do time" class="foto-time"> <!-- // imagem que você deve colocar na pasta imagens -->
-</section>
-  
+  <link rel="icon" type="image/png" href="TIME08LOGO.png">
 </head>
 
 <body>
-  
-  <h1>Nossos Filmes</h1>
-  <!-- // Título principal do site -->
 
-  <div id="filmes-container" class="grid"></div>
-  <!-- // Contêiner onde o JS vai colocar os cards dinamicamente -->
+<section id="sobre-site">
+  <h2>Bem-vindo ao mundo do Time 08!</h2>
 
-  <!-- MODAL (a janelinha que abre) -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      
-<span id="closeModal" class="close">&times;</span>
-      <!-- // Botão X para fechar o modal -->
+  <p>Oie! Se você chegou até aqui, provavelmente faz parte do <strong>Time 8</strong> ou conhece o nosso trabalho. Este secret site existe por um motivo simples: agradecer — do jeito certo — esse time absurdo do qual eu tenho orgulho de fazer parte.</p>
 
-      <img id="modalImg" src="" alt="">
-      <!-- // A imagem do filme aparece aqui -->
+  <p>Pode soar brega, mas a verdade é direta: eu amo demais esses caras. Sem exagero nenhum, é o melhor time que já fiz parte na vida.</p>
 
-      <h2 id="modalTitulo"></h2>
-      <!-- // Título do filme -->
+  <p>
+    Agradeço a <strong>Samuel</strong> pelas figurinhas, memes, nigga, conversas e risadas, tu é massa dms, cara!<br>
 
-      <p id="modalElenco"></p>
-      <!-- // Elenco do filme -->
+    Agradeço a <strong>Artur</strong> pelos memes, pela mãe, pelas conversas e pela criatividade, tu é incrível, bixo!<br>
 
-      <p id="modalSinopse"></p>
-      <!-- // Sinopse do filme -->
-    </div>
+    Agradeço a <strong>Cabum (Gabriel)</strong> pelas conversas, memes, eventos, brincadeiras e todo acolhimento, tu é surreal, manin!<br>
+
+    Agradeço a <strong>Matheus</strong> pelas risadas, conversas, brincadeiras, momentos, acolhimento e fotos, tu é fera dms, irmão!
+  </p>
+
+  <p>
+    Vocês são realmente especiais e estarão no meu coração pra sempre. Sem mentira nenhuma: eu nunca esqueço ninguém, principalmente quando é alguém que eu crio afeto.
+  </p>
+
+  <p>
+    O <strong>Time 8</strong> não é só time. É um conjunto de histórias e aventuras patacumbásticas 🚀
+  </p>
+</section>
+
+<section id="time">
+  <h2>Nosso Time</h2>
+  <img src="FT8.jpeg" alt="Foto do time" class="foto-time">
+</section>
+
+<h1>Nossos Filmes</h1>
+
+<div id="filmes-container" class="grid"></div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+
+    <span id="closeModal" class="close">&times;</span>
+
+    <img id="modalImg" src="" alt="">
+
+    <h2 id="modalTitulo"></h2>
+
+    <p id="modalElenco"></p>
+
+    <p id="modalSinopse"></p>
+
   </div>
+</div>
 
-  <script src="script.js"></script>
-  <!-- // Carrega o JavaScript no final -->
+<script src="script.js"></script>
+
 </body>
-
-<link rel="icon" type="image/png" href="TIME08LOGO.png">
-
 </html>
-
-
-
-
-
-
-
