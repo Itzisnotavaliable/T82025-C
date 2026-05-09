@@ -103,6 +103,9 @@ livros.forEach((livro) => {
     <h2>${livro.titulo}</h2>
     <p><strong>${livro.autor}</strong></p>
     <p>${livro.descricao}</p>
+    <a href="assets/${livro.pdf}" target="_blank" class="btn-livro">
+    Ler Livro
+    </a>
   `;
 
   livrosContainer.appendChild(card);
