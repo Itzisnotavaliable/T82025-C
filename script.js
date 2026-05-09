@@ -26,7 +26,7 @@ const livros = [
     titulo: "1984",
     autor: "George Orwell",
     descricao: "Uma distopia sobre vigilância e controle absoluto.",
-    image: "1984.jpg"
+    image: "AFTS (2025).png"
   },
 
   {
