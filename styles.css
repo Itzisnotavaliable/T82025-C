@@ -163,3 +163,13 @@ body {
 .btn-livro:hover {
   background: #cfcfcf;
 }
+
+/* titulo estilo justify*/
+
+#sobre-site {
+  text-align: justify;
+}
+
+#sobre-site h2 {
+  text-align: center;
+}
