@@ -111,139 +111,56 @@ body {
 /* CHAT MOBILE PREMIUM */
 /* ========================= */
 
-#chat {
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto;
-
-  background: #121212;
-  border: 1px solid #2a2a2a;
-  border-radius: 16px;
-
-  padding: 16px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* resposta */
-#resposta {
-  background: rgba(124, 58, 237, 0.12);
-  border: 1px solid rgba(124, 58, 237, 0.3);
-
-  padding: 12px;
-  border-radius: 10px;
-
-  min-height: 60px;
-  font-size: 14px;
-}
-
-/* perguntas */
-#perguntas {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* botão pergunta mobile */
-.pergunta {
-  padding: 12px;
-  border-radius: 10px;
-
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
   color: white;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+#chat {
+  width: 420px;
+  background: #151515;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* resposta estilo “IA” */
+#resposta {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  min-height: 60px;
+  line-height: 1.4;
+  border-left: 4px solid #7c3aed;
+}
+
+/* grid das perguntas */
+#perguntas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+/* cards das perguntas */
+.pergunta {
+  background: #222;
+  border: 1px solid #2f2f2f;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
   cursor: pointer;
-
-  font-size: 14px;
-
+  text-align: left;
   transition: 0.2s;
 }
 
+/* efeito hover moderno */
 .pergunta:hover {
-  transform: translateX(4px);
+  background: #2e2e2e;
+  transform: translateY(-2px);
   border-color: #7c3aed;
-}
-
-/* ========================= */
-/* MODAL RESPONSIVO */
-/* ========================= */
-
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-
-  background: rgba(0,0,0,0.75);
-  backdrop-filter: blur(6px);
-
-  justify-content: center;
-  align-items: center;
-
-  padding: 16px;
-}
-
-.modal-content {
-  width: 100%;
-  max-width: 480px;
-
-  background: #121212;
-  border-radius: 14px;
-  border: 1px solid #2a2a2a;
-
-  padding: 16px;
-
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-/* ========================= */
-/* RESPONSIVO MOBILE (CHAVE DO SISTEMA) */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-  #app {
-    padding: 14px;
-    gap: 28px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-livros {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .card img {
-    height: 180px;
-  }
-
-  .livro-card img {
-    height: 200px;
-  }
-
-  #chat {
-    border-radius: 14px;
-  }
-}
-
-/* mobile pequeno */
-@media (max-width: 420px) {
-
-  .grid-livros {
-    grid-template-columns: 1fr;
-  }
-
-  .pergunta {
-    font-size: 13px;
-  }
-
-  #resposta {
-    font-size: 13px;
-  }
 }
