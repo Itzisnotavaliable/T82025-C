@@ -12,7 +12,9 @@ body {
   font-family: Arial, sans-serif;
   padding: 20px;
   line-height: 1.5;
-  height: 100%;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* CONTAINER */
@@ -63,7 +65,6 @@ h2 {
 /* GRID FILMES */
 /* ========================= */
 
-/* GRID FILMES */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -71,50 +72,70 @@ h2 {
   margin-top: 20px;
 }
 
+/* ========================= */
 /* CARD FILMES */
+/* ========================= */
+
 .card {
   background: #1f1f1f;
   border-radius: 14px;
   overflow: hidden;
+
   cursor: pointer;
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+
   display: flex;
   flex-direction: column;
+
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .card:hover {
   transform: translateY(-5px) scale(1.01);
+
   background: #2a2a2a;
+
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 /* IMAGEM DOS FILMES */
+
 .card img {
   width: 100%;
   height: 320px;
+
   object-fit: cover;
   object-position: center;
+
   display: block;
 }
 
 /* CONTEÚDO DO CARD */
+
 .card h2 {
   padding: 14px 14px 8px;
-  margin: 0;
+
   font-size: 1.15rem;
   line-height: 1.3;
 }
 
 .card p {
   padding: 0 14px 14px;
-  margin: 0;
+
   color: #d1d1d1;
+
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
+/* ========================= */
 /* MODAL */
+/* ========================= */
+
 .modal {
   position: fixed;
   inset: 0;
@@ -133,6 +154,7 @@ h2 {
   z-index: 999;
 }
 
+/* CARD ABERTO */
 
 .modal-content {
   width: 90%;
@@ -149,30 +171,43 @@ h2 {
   position: relative;
 
   animation: aparecer 0.25s ease;
+
+  scrollbar-width: thin;
 }
 
 /* IMAGEM DO MODAL */
+
 #modalImg {
   width: 100%;
   max-height: 55vh;
+
   object-fit: contain;
+
   background: #000;
+
   display: block;
 }
 
-/* TÍTULO, ELENCO E SINOPSE */
+/* TÍTULO */
+
 #modalTitulo {
   font-size: 1.6rem;
-  margin: 0;
+
   padding: 18px 20px 10px;
+
   text-align: center;
 }
+
+/* ELENCO + SINOPSE */
 
 #modalElenco,
 #modalSinopse {
   padding: 0 20px 16px;
+
   color: #e0e0e0;
+
   line-height: 1.6;
+
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -188,32 +223,26 @@ h2 {
 }
 
 /* BOTÃO FECHAR */
-@media (max-width: 600px) {
-  .modal-content {
-    width: 95vw;
-    max-height: 92vh;
-  }
 
-  .close {
-    top: 8px;
-    right: 8px;
-    width: 48px;
-    height: 48px;
-    font-size: 32px;
-  }
+.close {
+  position: absolute;
 
-  #modalTitulo {
-    font-size: 1.3rem;
-    padding: 16px 16px 8px;
-  }
+  top: 10px;
+  right: 14px;
 
-  #modalElenco,
-  #modalSinopse {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+  font-size: 30px;
+
+  color: white;
+
+  cursor: pointer;
+
+  z-index: 1000;
 }
+
+/* ========================= */
 /* ANIMAÇÃO */
+/* ========================= */
+
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -233,19 +262,26 @@ h2 {
 .grid-livros {
   display: flex;
   flex-wrap: wrap;
+
   gap: 20px;
+
   justify-content: center;
 }
 
 .livro-card {
   width: 220px;
+
   background: #1a1a1a;
+
   border-radius: 10px;
+
   overflow: hidden;
+
   padding-bottom: 10px;
 }
 
 /* IMAGENS DOS LIVROS */
+
 .livro-card img {
   width: 100%;
   height: 320px;
@@ -263,34 +299,90 @@ h2 {
 #chat {
   width: 100%;
   max-width: 500px;
+
   margin: 40px auto;
 }
 
 #resposta {
   background: #1f1f1f;
+
   padding: 12px;
+
   border-radius: 8px;
+
   margin-bottom: 10px;
 }
 
 #perguntas {
   display: flex;
   flex-direction: column;
+
   gap: 8px;
 }
 
 /* BOTÕES */
+
 #perguntas button {
   padding: 10px;
+
   border-radius: 8px;
+
   background: #1f1f1f;
+
   border: none;
+
   color: white;
+
   cursor: pointer;
+
   transition: 0.2s;
+
   text-align: left;
 }
 
 #perguntas button:hover {
   background: #2a2a2a;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 280px;
+  }
+
+  .modal-content {
+    width: 95vw;
+    max-height: 92vh;
+  }
+
+  #modalTitulo {
+    font-size: 1.3rem;
+
+    padding: 16px 16px 8px;
+  }
+
+  #modalElenco,
+  #modalSinopse {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .close {
+    top: 8px;
+    right: 10px;
+
+    font-size: 32px;
+  }
 }
