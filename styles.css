@@ -132,7 +132,8 @@ h2 {
   width: min(92vw, 700px);
   max-height: 90vh;
   border-radius: 16px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   animation: aparecer 0.25s ease;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
