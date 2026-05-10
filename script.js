@@ -139,10 +139,35 @@ window.onclick = (e) => {
 
 console.log("JS carregou");
 
+const perguntas = [
+  { id: "protagonistas", texto: "Quem são os protagonistas dos filmes?" },
+  { id: "antagonistas", texto: "Quem são os antagonistas?" },
+  { id: "pior", texto: "Qual é o pior filme da franquia AFTS?" },
+  { id: "geografados", texto: "Quem são os melhores personagens de Geografados?" },
+  { id: "inimiga", texto: "Quem é a maior inimiga da franquia AFTS?" },
+  { id: "quantos", texto: "Quantos filmes existirão na franquia AFTS?" },
+  { id: "atores", texto: "Melhores atores (de acordo com a crítica)" },
+  { id: "maria", texto: "Quem é Maria Cecília?" },
+  { id: "aft5", texto: "Teremos AFTS 5?" },
+  { id: "livros", texto: "O Time Oito tem livros?" }
+];
+
+// 🔥 mostrar perguntas na tela
+const perguntasContainer = document.getElementById("perguntas");
+
+perguntas.forEach(p => {
+  const btn = document.createElement("button");
+  btn.innerText = p.texto;
+  btn.className = "pergunta";
+  btn.onclick = () => responder(p.id);
+  perguntasContainer.appendChild(btn);
+});
+
+// 💬 respostas
 function responder(pergunta) {
   let resposta;
 
-  if (pergunta === "protagonistas") {
+    if (pergunta === "protagonistas") {
     resposta = "Normalmente são os membros do Time 8, que além de dirigirem, gostam de participar de suas obras, enriquecendo o elenco com seus talentos.";
   }
 
@@ -186,5 +211,5 @@ function responder(pergunta) {
     resposta = "Pergunta não encontrada.";
   }
 
-  document.getElementById("resposta").innerText = resposta;
+document.getElementById("resposta").innerText = resposta;
 }

@@ -175,3 +175,28 @@ body {
   background: #cfcfcf;
 }
 
+#chat {
+  width: 320px;
+  background: #111;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: Arial;
+}
+
+#resposta {
+  margin-bottom: 15px;
+  min-height: 50px;
+}
+
+.pergunta {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
