@@ -139,38 +139,3 @@ window.onclick = (e) => {
 
 console.log("JS carregou");
 
-async function enviarPergunta() {
-
-  const input = document.getElementById("userInput");
-
-  const chatBox = document.getElementById("chat-box");
-
-  const pergunta = input.value;
-
-  chatBox.innerHTML += `
-    <p><strong>Você:</strong> ${pergunta}</p>
-  `;
-
-  input.value = "";
-
-  const resposta = await fetch("URL_DA_API", {
-
-    method: "POST",
-
-    headers: {
-      "Content-Type": "application/json",
-
-      "Authorization": "Bearer SUA_API_KEY"
-    },
-
-    body: JSON.stringify({
-      message: pergunta
-    })
-  });
-
-  const dados = await resposta.json();
-
-  chatBox.innerHTML += `
-    <p><strong>IA:</strong> ${dados.response}</p>
-  `;
-}
