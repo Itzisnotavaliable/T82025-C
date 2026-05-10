@@ -2,21 +2,22 @@
 
 #sobre-site,
 #time {
-  text-align: center;
+  width: 100%;
+  max-width: 900px;
   margin: 40px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
 }
 
 .foto-time {
   display: block;
-  margin: 20px auto 0 auto;
   width: 250px;
+  margin: 20px auto 0 auto;
   border-radius: 10px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 /* FUNDO E TEXTO */
