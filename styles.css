@@ -12,6 +12,8 @@ body {
   font-family: Arial, sans-serif;
   padding: 20px;
   line-height: 1.5;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* CONTAINER */
@@ -115,30 +117,23 @@ h2 {
 
 /* MODAL */
 .modal {
-  display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(5px);
-  z-index: 999;
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  overflow: hidden;
 }
 
-/* CARD ABERTO */
 .modal-content {
-  background: #1a1a1a;
   width: min(92vw, 700px);
   max-height: 90vh;
-  border-radius: 16px;
   overflow-y: auto;
   overflow-x: hidden;
-  position: relative;
-  animation: aparecer 0.25s ease;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-  display: flex;
-  flex-direction: column;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* IMAGEM DO MODAL */
