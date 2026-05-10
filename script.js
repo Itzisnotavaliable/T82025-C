@@ -180,3 +180,34 @@ function enviarPergunta() {
 
   input.value = "";
 }
+
+function responder(pergunta) {
+
+  pergunta = pergunta.toLowerCase();
+
+  if (pergunta.includes("afts")) {
+    return "AFTS é a principal saga do Time 08, onde se passa a trama da entidade que possui Artur no primeiro filme e apresenta toda aquela sequência de eventos caóticos envolvendo o sobrenatural e os ocorridos escolares que criam o humor no longa.";
+  }
+
+  if (pergunta.includes("artur")) {
+    return "Artur é um dos protagonistas da franquia.";
+  }
+
+  if (pergunta.includes("matheus")) {
+    return "Matheus é um dos membros mais importantes do Time 08.";
+  }
+
+  if (pergunta.includes("daniela")) {
+    return "Daniela de Assis é a maior geógrafa do universo.";
+  }
+
+  if (pergunta.includes("bbbcast")) {
+    return "BBBCAST é um projeto focado em entretenimento e caos absoluto.";
+  }
+
+  if (pergunta.includes("geografados")) {
+    return "GEOGRAFADOS mostra o Time 08 enfrentando Daniela de Assis.";
+  }
+
+  return "Não sei responder isso ainda.";
+}
