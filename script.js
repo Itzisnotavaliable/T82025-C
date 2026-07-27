@@ -52,7 +52,7 @@ const filmes = [
 
 const livros = [
   {
-    titulo: "A Um Amigo Chamado Matheus",
+    titulo: "Diário de um Time 8",
     autor: "Andrey Vieira",
     descricao: "Em Desenvolvimento...",
     image: "Desenvolvimento.jpg",
