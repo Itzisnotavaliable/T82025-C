@@ -51,13 +51,6 @@ const filmes = [
 ];
 
 const livros = [
-  {
-    titulo: "Diário de um Time 8",
-    autor: "Andrey Vieira",
-    descricao: "Em Desenvolvimento...",
-    image: "Desenvolvimento.jpg",
-    pdf: "AmigoChamadoMatheus.pdf"
-  }
 ];
 
 const container = document.getElementById("filmes-container");
